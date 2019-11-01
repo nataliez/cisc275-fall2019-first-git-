@@ -6,7 +6,7 @@ Alyssa Burks, Sydney Clasen, Sarah Joyce, Anthony Leung, Natalie Zimmerman
 # Project
 An educational game produced for the National Estuarine Research Reserve System and the Delaware Department of Natural Resources and Environmental Control for elementary school students.
 
-##Objectives:
+## Objectives:
 
 * to educate students grades 2-7 about environmental impact
 * to create a game that promotes learning as a fun activity
