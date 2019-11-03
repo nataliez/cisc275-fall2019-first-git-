@@ -27,11 +27,11 @@ public class GameController extends Application {
             public void handle(long currentNanoTime)
             {
                 //increment the x and y coordinates, alter direction if necessary
-                model.updateLocationandDirection(view.getDirection(), view.getBassMode()); //get rid of BassMode
+                model.updateLocationandDirection(view.getDirection());
                 //input the x coordinates, y coordinates, and direction picture
                 view.update(model.getX(), model.getY(), model.getDirection());
                 
-                System.out.println(view.getDirection() +" "+ view.getBassMode()); //get rid of BassMode
+                System.out.println(view.getDirection() +" ");
                 System.out.println(model.getX() + " " + model.getY() + " "+ model.getDirection());
 
                 try {

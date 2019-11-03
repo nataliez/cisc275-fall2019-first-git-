@@ -11,7 +11,6 @@ public class GameModel {
 	int imgHeight;
 
 	Direction direction;
-	BassMode bassMode;
 
 	public GameModel(int width, int height, int imageWidth, int imageHeight) {
 		this.canvasWidth = width;
@@ -33,24 +32,7 @@ public class GameModel {
 	}
 
 	// increment the x and y coordinates, alter direction if necessary
-	public void updateLocationandDirection(Direction direction, BassMode bassMode) {
-		// The Bass's speed based off of BassMode
-		if (bassMode == BassMode.CONFUSE) {
-			xIncr = 4;
-			yIncr = 1;
-		} else if (bassMode == BassMode.ATTAC) {
-			xIncr = 16;
-			yIncr = 4;
-		} else if (bassMode == BassMode.DEFAULT){
-			xIncr = 8;
-			yIncr = 2;
-		}
-		else if (bassMode == BassMode.STOP) {
-			xIncr = 0;
-			yIncr = 0;
-		}
-
-
+	public void updateLocationandDirection(Direction direction) {
 //		Bass starts from top left corner and heads towards southeast so to change direction multiply by -1
 		switch (direction) {
 		case NORTH:
@@ -69,7 +51,6 @@ public class GameModel {
 		yloc += yIncr;
 
 		this.direction = direction;
-		this.bassMode = bassMode;
 
 	}
 }
