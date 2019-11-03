@@ -42,8 +42,6 @@ public class GameView {
 	Direction lastDirection = Direction.SOUTHEAST;
     int modeInd = -1;
     // Used to index the animationSequence outer array. 
-    BassMode bassMode;
-    BassMode lastBassMode;
 	
 	//variables to determine the location of image
 	int x = 0;
@@ -62,14 +60,12 @@ public class GameView {
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() { 
             public void handle(ActionEvent e) 
             { 
-            	BassMode temp = lastBassMode;
-            	lastBassMode = bassMode;
-            	bassMode = temp;
+            	//pause function
             }
             
         }; 
  
-        theStage.setTitle("Bass");
+        theStage.setTitle("Game");
 
         Group root = new Group();
         Scene theScene = new Scene(root);
@@ -96,18 +92,6 @@ public class GameView {
 					System.out.println("D");
 					currentDirection = Direction.EAST;
 					break;
-				case DIGIT1:
-					System.out.println("CONFUSE");
-					bassMode = BassMode.CONFUSE;
-					break;
-				case DIGIT2:
-					System.out.println("DEFAULT");
-					bassMode = BassMode.DEFAULT;
-					break;
-				case DIGIT3:
-					System.out.println("ATTAC");
-					bassMode = BassMode.ATTAC;
-					break;
 				default:
 					System.out.println(event.getCode());
 					break;
@@ -124,8 +108,6 @@ public class GameView {
         b.setOnAction(event); 
 
 		// bassMode starts with DEFAULT
-        bassMode = BassMode.DEFAULT;
-        lastBassMode = BassMode.STOP;
 		importImages();
 	}
 	
@@ -137,20 +119,18 @@ public class GameView {
         
         // Eclipse will look for <path/to/project>/bin/<relative path specified>
         String img_file_base = "images/";
-        String bass_file_base = img_file_base + "drop-the-bass/";
+        String bass_file_base = img_file_base;
         String ext = ".png";
 
         // Infer number of modes from BassMode enum
-		animationSequence = new Image[BassMode.values().length]; 
+		animationSequence = new Image[BassMode.values().length];
 			
 		for(BassMode mode : BassMode.values())
 		{
             // Use ordinal to index array, then getName to get the string 
             // specified in the enum definition above
-			if(mode != BassMode.STOP) {
 			animationSequence[mode.ordinal()] = createImage(bass_file_base
                                                         + mode.getName() + ext);
-			}
 		}		  	
 
         // Now we have the wide pngs for each mode stored in animationSequence
@@ -170,17 +150,6 @@ public class GameView {
 		x = xLoc;
 		y = yLoc;
 		currentDirection = direction;
-    
-		if (bassMode == BassMode.DEFAULT) {
-			modeInd = 0;
-		} else if (bassMode == BassMode.CONFUSE) {
-			modeInd = 1;
-		} else if (bassMode == BassMode.ATTAC) {
-			modeInd = 2;
-		}
-//		else if (bassMode == BassMode.STOP) {
-//			does nothing
-//		}
 
         // TODO fix bassMode to be based on key presses
 		Image pics = animationSequence[modeInd /*bassMode.ordinal()*/];
@@ -305,10 +274,6 @@ public class GameView {
 
 	public Direction getDirection() {
 		return currentDirection;
-	}
-
-	public BassMode getBassMode() {
-		return bassMode;
 	}
 
 }
