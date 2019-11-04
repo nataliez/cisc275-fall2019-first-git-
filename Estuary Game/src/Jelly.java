@@ -13,7 +13,7 @@ public class Jelly extends MoveObject{
 	 */
     int imgHeight = 50;
 	/**
-	 * The wifth of the jellyfish image in pixels. (Placeholder of 50 for now)
+	 * The width of the jellyfish image in pixels. (Placeholder of 50 for now)
 	 */
     int imgWidth = 50;
 	
