@@ -46,6 +46,14 @@ public class GameObject {
 		this.imgWidth = imgWidth;
 	}
 	
+	/**
+	 * Use the x- and y- coordinates of this and antoher GameObject to determine if they are currently colliding with one another.
+	 * @return boolean whether this GameObject has collided with another
+	 */
+	public boolean collision(GameObject go2) {
+		return true;
+	}
+	
 	
 	
 }
