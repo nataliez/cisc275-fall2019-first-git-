@@ -123,9 +123,9 @@ public class GameView {
         String ext = ".png";
 
         // Infer number of modes from BassMode enum
-		animationSequence = new Image[BassMode.values().length];
+		animationSequence = new Image[Character.values().length];
 			
-		for(BassMode mode : BassMode.values())
+		for(Character mode : Character.values())
 		{
             // Use ordinal to index array, then getName to get the string 
             // specified in the enum definition above
