@@ -5,7 +5,7 @@
  */
 public class Jelly extends MoveObject{
 	/**
-	 * The score of the Jelly object which is used to calculate the tutle character's overall score. Always 1.
+	 * The score of the Jelly object which is used to calculate the turtle character's overall score. Always 1.
 	 */
 	int score = 1;
 	/**
