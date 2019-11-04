@@ -41,6 +41,7 @@ public class GameView {
 	Direction currentDirection = Direction.SOUTHEAST;
 	Direction lastDirection = Direction.SOUTHEAST;
     int modeInd = -1;
+    Pictures pictures;
     // Used to index the animationSequence outer array. 
 	
 	//variables to determine the location of image
@@ -119,18 +120,18 @@ public class GameView {
         
         // Eclipse will look for <path/to/project>/bin/<relative path specified>
         String img_file_base = "images/";
-        String bass_file_base = img_file_base;
+        String picture_file_base = img_file_base;
         String ext = ".png";
 
         // Infer number of modes from BassMode enum
-		animationSequence = new Image[Character.values().length];
+		animationSequence = new Image[pictures.values().length];
 			
-		for(Character mode : Character.values())
+		for(Pictures p : pictures.values())
 		{
             // Use ordinal to index array, then getName to get the string 
             // specified in the enum definition above
-			animationSequence[mode.ordinal()] = createImage(bass_file_base
-                                                        + mode.getName() + ext);
+			animationSequence[p.ordinal()] = createImage(picture_file_base
+                                                        + p.getName() + ext);
 		}		  	
 
         // Now we have the wide pngs for each mode stored in animationSequence

@@ -1,7 +1,7 @@
 
 public enum Pictures {
 
-    SCUBA("scuba"), TURTLE("turtle"), BASS("bass"), CRAB("crab"), BAG("bag"), JELLY("jelly"), OYSTER("oyster"), MUSSEL("mussel");
+    BAG("bag"), BOTTLE("bottle"), CRAB("crab"), MUSSEL("mussel"), OYSTER("oyster"), RECYCLEBOX("recyclebox"), SCALLOP("scallop"), SCUBADIVER("scubadiver"), SEAWEEDROCK("seaweedrock"), STRIPEDBASS("stripedbass"), TRASH("trash"), TURTLE("turtle");
 
 	private String name = null;
 	
