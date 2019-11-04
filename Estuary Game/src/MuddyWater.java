@@ -19,6 +19,7 @@ public class MuddyWater {
 	
 	/**
 	 * Returns the current darkness
+	 * @return int darkness
 	 */
 	public int getDarkness() {
 		return darkness;
