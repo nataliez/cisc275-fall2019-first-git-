@@ -1,5 +1,5 @@
 
 public class Bag extends MoveObject{
 
-	int score;
+	int score; // -1 point if collided
 }
