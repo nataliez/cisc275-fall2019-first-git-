@@ -53,7 +53,7 @@ public class GameObject {
 	 */
 	public boolean collision(GameObject go2) {
 		return true;
-	}
+	} //TODO determine what the FUCK a collision even is in game logic
 	
 	
 	
