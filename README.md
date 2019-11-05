@@ -14,3 +14,12 @@ An educational game produced for the National Estuarine Research Reserve System 
 
 ## Storyline:
 You are a scuba diver in your local estuary. One day, your fish friend tells you he lost his other fish friend at the bottom of the estuary, so you must go on an adventure to find him. You are given a map that will lead you through 3 educational minigames to teach you about environmental impact. After completing the minigames, you will find your fish friend and win the game.
+
+## Push Commands List
+
+* cd into the cisc275f19-project-cisc275f19-team-10-6 folder on your computer.
+* Type "git status" to make sure you are in the correct folder with changes to be committed.
+* Use "git add \*" to stage all of your changed files.
+* Type "git commit -m "message text"" to commit your changes.
+* Type "git push" and follow the prompts.
+* You're all set!
