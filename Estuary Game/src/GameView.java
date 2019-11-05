@@ -119,12 +119,12 @@ public class GameView {
         // multiple images of the animate at different time steps
         
         // Eclipse will look for <path/to/project>/bin/<relative path specified>
-        String img_file_base = "images/";
+        String img_file_base = "estuaryImages/";
         String picture_file_base = img_file_base;
         String ext = ".png"; //please
 
         // Infer number of modes from BassMode enum
-		animationSequence = new Image[pictures.values().length];
+		/*animationSequence = new Image[pictures.values().length];
 			
 		for(Pictures p : pictures.values())
 		{
@@ -132,7 +132,7 @@ public class GameView {
             // specified in the enum definition above
 			animationSequence[p.ordinal()] = createImage(picture_file_base
                                                         + p.getName() + ext);
-		}		  	
+		}*/
 
         // Now we have the wide pngs for each mode stored in animationSequence
         
@@ -153,7 +153,8 @@ public class GameView {
 		currentDirection = direction;
 
         // TODO fix bassMode to be based on key presses
-		Image pics = animationSequence[modeInd /*bassMode.ordinal()*/];
+		//Image pics = animationSequence[modeInd /*bassMode.ordinal()*/];
+		Image turtle = createImage("estuaryImages/turtle.png");
 		picNum = (picNum + 1) % picCount;
 
         // Clear the canvas
@@ -168,7 +169,8 @@ public class GameView {
         Rectangle2D croppedPortion = new Rectangle2D(imgWidthOrig*picNum, 0, 
                                                  imgWidthOrig, imgHeightOrig);
         // Define an ImageView with the wide png image 'pics'
-        ImageView imageView = new ImageView(pics);
+        //ImageView imageView = new ImageView(pics);
+        ImageView imageView = new ImageView(turtle);
         imageView.setViewport(croppedPortion);
         imageView.setFitWidth(imgWidthOrig);
         imageView.setFitHeight(imgHeightOrig);
