@@ -121,7 +121,7 @@ public class GameView {
         // Eclipse will look for <path/to/project>/bin/<relative path specified>
         String img_file_base = "images/";
         String picture_file_base = img_file_base;
-        String ext = ".png";
+        String ext = ".png"; //please
 
         // Infer number of modes from BassMode enum
 		animationSequence = new Image[pictures.values().length];
