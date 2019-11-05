@@ -137,7 +137,7 @@ public class GameView {
         // Now we have the wide pngs for each mode stored in animationSequence
         
         // Load background
-        background = createImage(img_file_base + "underwater" + ext);
+        background = createImage(img_file_base + "bg" + ext);
 	}
 	
     //Read image from file and return
