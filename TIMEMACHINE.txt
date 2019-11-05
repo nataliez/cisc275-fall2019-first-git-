@@ -1,0 +1,9 @@
+Hi,
+Nice to see you again. Here's what to do if you mess up everything and have to revert to a previous commit.
+
+1. Find the last commit you want to revert to. Use "git log --graph --all" or look through GitHub's commits page to see if that commit has the files you want.
+2. Do a hard reset. Use "git reset --hard (commit number prefix)"
+3. Make sure you don't have anything to add or commit. Use "git status" excessively.
+4. When you're sure you're ready, force push. Use "git push --force" and follow the prompts.
+
+This link helps. https://ohi-science.org/news/github-going-back-in-time
