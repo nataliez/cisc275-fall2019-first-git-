@@ -1,5 +1,6 @@
 	1.	Create java files to make this code compile and run. 
-	2.	What five objects are created in the main? 		1. A new list Dog
+	2.	What five objects are created in the main? 		
+		1. A new list Dog
 		2. Dog ("Fido", 4)
 		3. Dog ("Fido", 3)
 		4. Dog ("Alfie", 4)
